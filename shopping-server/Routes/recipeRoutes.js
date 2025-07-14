@@ -19,7 +19,7 @@ router.get('/recipes/:id', (req, res) => {
 });
 
 // ✅ הוספת מתכון חדש
-router.post('/recipes', (req, res) => {
+router.post('/recipes/:id', (req, res) => {
   const { title, description } = req.body;
   const newRecipe = {
     id: Date.now(),

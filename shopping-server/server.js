@@ -9,9 +9,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use('/api', recipeRoutes);
-
-
 
 let items = [
   { id: 1, text: 'לחם' },
@@ -39,10 +36,11 @@ app.delete('/api/items/:id', (req, res) => {
   res.status(204).end();
 });
 
+app.use('/api', recipeRoutes);
 
 app.use(express.static(path.join(__dirname, '../client/dist')));
 
-app.get('/', (req,res) => {
+app.get('*', (req,res) => {
   res.sendFile(path.resolve(__dirname, '../client/dist', 'index.html'));
 });
 

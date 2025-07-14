@@ -11,7 +11,7 @@ app.use(express.json());
 
 app.use('/api', recipeRoutes);
 
-app.use(express.static(path.join(__dirname, '../client/dist')));
+
 
 let items = [
   { id: 1, text: 'לחם' },
@@ -40,8 +40,10 @@ app.delete('/api/items/:id', (req, res) => {
 });
 
 
-app.get('/', (req,res) => {
-  res.sendFile(path.resolve(__dirname, '../client/dist', 'index.html'));
+app.use(express.static(path.join(__dirname, 'client/dist')));
+
+app.get('*', (req,res) => {
+  res.sendFile(path.resolve(__dirname, 'client/dist', 'index.html'));
 });
 
 

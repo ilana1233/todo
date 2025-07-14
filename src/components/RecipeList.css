@@ -1,0 +1,42 @@
+.recipe-container{
+    max-width: 600px;
+    margin: 2rem;
+    padding: 1rem;
+    background-color: thistle;
+    border-radius: 1rem;
+    box-shadow: 0,0,10px rgba(0,0,0,1);
+}
+
+.recipe-container h3{
+    margin-bottom: 1rem;
+}
+.recipe-input, .recipe-textarea{
+width: 100%;
+padding: 0.6rem;
+margin-bottom: 1rem;
+font-size: 1rem;
+border: 1px solid #ccc;
+border-radius: 0.5rem;
+}
+.recipe-buttons{
+    display: flex;
+    gap: 0.5rem;
+}
+.recipe-buttons button{
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.5rem;
+    transition: background-color 0.25s ease;
+}
+.recipe-buttons button:first-child{
+background-color: teal;
+color: white;
+}
+.recipe-buttons button:first-child:hover{
+    background-color: aquamarine;
+}
+.recipe-buttons button:last-child:hover{
+    background-color: aqua;
+}

@@ -40,12 +40,12 @@ app.use('/api', recipeRoutes);
 
 app.use(express.static(path.join(__dirname, '../client/dist')));
 
-app.get('*', (req,res) => {
+app.get('/', (req,res) => {
   res.sendFile(path.resolve(__dirname, '../client/dist', 'index.html'));
 });
 
 
 app.listen(PORT, () => 
-  console.log(`Server running on  port ${PORT}`));
+  console.log(`Server running on  port http://localhosr:5000 ${PORT}`));
 
 

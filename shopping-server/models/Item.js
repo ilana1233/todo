@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = required('mongoose');
 
 const itemSchema = new mongoose.Schema({
     text: {

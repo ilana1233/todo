@@ -16,7 +16,7 @@ let items = [
   { id: 2, text: 'חלב' },
 ];
 
-let recipes = [];
+let recipe = [];
 
 
 

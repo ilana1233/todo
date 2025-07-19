@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
-
+const item = require('../models/item');
 
 let recipes = []; // שמירת מתכונים בזיכרון
 
 // ✅ שליפת כל המתכונים
-router.get('/recipes', (req, res) => {
+router.get('/items', (req, res) => {
   res.json(recipes);
 });
 
